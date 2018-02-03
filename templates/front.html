@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>front page</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<style type="text/css">
+		*
+		{
+			box-sizing: border-box;
+			font-style: questrial;
+		}
+		BODY {
+
+        overflow-x:hidden;
+
+        }
+		#logo,
+		{
+			font-style:questrial;
+		}
+	
+		.col-1 {width:2.33%;}
+    .col-2 {width: 6.66%;}
+    .col-3 {
+
+          position: absolute;
+          top: 2px;
+          left: 950px; 
+           }
+    .col-4 {
+           position: absolute;
+           top: 200px;
+           left: 500px;
+           }
+    .col-5 {
+    	position: absolute;
+    	top: 15px;
+    	left: 1150px;
+    }
+    .col-6 {
+    	width: 15%;
+    	height: 13%;
+        position: absolute;
+        top: 450px;
+        left: 290px;
+        font-size: 25px;
+           }
+    .col-7 {
+    	width: 15%;
+    	height: 13%;
+        position: absolute;
+        top: 450px;
+        left: 920px;
+        font-size: 25px;
+           }
+    .col-8 {
+        margin-left: 5px;
+        width: 440px;
+        height: 55px;
+        -webkit-transition: width 1s ,height 2s;
+
+     }
+     .col-8:hover
+     {
+        width: 450px;
+        height: 70px;
+     }
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+    .logpos
+    {
+    	position: absolute;
+    	top: 15px;
+    	left: 400px;
+    }
+    #right /*7fffd4*/
+    {
+    	position: absolute;
+    	top: 180px;
+    	left: 1150px;
+
+
+    }
+    #navi
+    {
+        width: auto;
+        height: 80px;
+        background-color: rgba(0,0,0,0.4);
+    }
+    #bg
+    {
+   
+        background-image: url(hc1.jpg);
+        height:400px;
+        width: auto;
+        
+    }
+    [class*="col-"] {
+    float: left;
+    padding: 15px;
+    }
+	</style>
+
+</head>
+<body>
+{% load staticfiles %}
+<div class="row">
+<div class="col-1"><img src="{% static "logo.png" %}" width="100px" height="100px"></div>
+<div class="col-2"></div><h1 id="logo">db</h1></div>
+<div class="logpos"><h3><font face="forte">Website slogan</font></h3></div>
+<div class="col-3"><form><input type="text" name="search" placeholder="Enter here"  style="height:50px;border-radius:2px;"></form></div>
+<button class="col-5 btn-warning btn-xs">Search</button>
+
+
+<hr>
+<div id="bg">
+<button class="btn-info btn-warning col-8">Donor</button>
+<button class="btn-info btn-warning col-8">Receiver</button>
+<button class="btn-info btn-warning col-8">Emeregency Donor</button>
+</div>
+</body>
+</html>

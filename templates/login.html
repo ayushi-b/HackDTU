@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style type="text/css">
+
+     .img
+     {
+     	height: auto;
+     	width: 850px;
+
+     }
+
+    	#form
+    	{
+    		background-color: black;
+    		height: 637.1px;
+    		width: 515px;
+
+    		position: absolute;
+    		left:850px;
+    		top: 0px;
+    		border: 5px solid red;
+
+
+
+    	}
+    	#internal
+    	{
+    	      margin-left: 140px;
+    	      margin-top: 160px;
+    	}
+
+    </style>
+
+
+
+</head>
+<body>
+
+{% if msg is not None %}
+<p>{{msg}}</p>
+	{% endif %}
+
+
+{% load staticfiles %}
+<img src="{% static "dribble1.gif" %}" class="img">
+<div id="form">
+    <button class="btn btn-danger btn-lg" data-toggle="modal" data-target="#myModal">Register/Sign up</button>
+	<div id="internal">
+		<!--input type="text" name="mail" placeholder="Enter mail id here" style="width:250px;height:70px;border:5px solid orange;border-radius:3px;"><br><br>
+	<input type="password" name="password" placeholder="Enter password" style="width:250px;height:70px;border:5px solid orange;border-radius:3px;""><br><br-->
+<table>
+
+	<form  method="post">
+<tr>
+
+			{% csrf_token %}
+				<td>
+
+				{{form2.user_email.label_tag}}</td>
+				<td>
+
+				{{form2.user_email}}</td></tr>
+				<br>
+				<tr>
+
+				<br />
+			</tr>
+			<tr>
+
+			<td>
+
+				{{form2.user_password.label_tag}}</td>
+			<td>
+
+				{{form2.user_password}}
+</td>
+</tr>
+</table>
+
+	<center><button class= "btn btn-warning btn-lg" type = "submit" name = "login" value = 1>Login</button><center>
+
+</form>
+	</div>
+
+
+</div>
+
+<div class="container">
+
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title"></h4>
+        </div>
+        <div class="modal-body">
+          <p>
+			  <form method="post">
+			{% csrf_token %}
+			{{form.as_p}}
+			<button class= "btn btn-warning btn-lg" type = "submit" name = "register" value = 1>Register</button>
+		</form>
+		  </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" name = "register" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+</body>
+
+</body>
+</html>

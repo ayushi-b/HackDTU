@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<title>Receiver</title>
+<head>
+
+<meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="http://www.w3schools.com/lib/w3.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+</script>
+<style type="text/css">
+	#parent{
+		display: flex;
+	}
+</style>
+ <body>
+ <center>
+<div id="header" style="margin-top: 25px;">
+	
+</div>
+		<input type="text" name="bloodgroup" placeholder="Blood Group" style="border-radius: 10px; width: 200px; padding: 10px;"> 
+		<input type="text" name="organ" style="margin-left: 25px; border-radius: 10px; width: 200px; padding: 10px;" placeholder="Organ" >
+		<input type="text" name="location" style="margin-left: 25px; border-radius: 10px; width: 200px; padding: 10px;" placeholder="Location" >
+<br>
+<br>
+ <button class="btn btn-warning">Filter Results</button>
+ <div style="margin-top: 25px;">
+ <div class="w3-panel w3-card-4" style="width: 700px; height: auto;">
+ <center><h1 ><b>Organs Available</b></h1></center>
+ 
+ <table style="border: 2px;">
+ 	<tr >
+ 		<td  >
+ 		<div class="w3-panel w3-card-4 w3-border" style=" 	width: 500px; height: 250px;">
+ 		<!-- organs for donation display in card-->
+ 		<div id="parent">
+ 		<div id="og" style="float: left;"><b>Organ for Donation: </b></div>
+ 		<div id="on" style="color: red; float: left;"><b>Liver</b></div>
+ 		</div>
+ 		<br>
+ 		<!-- blood group display in card-->
+ 		<div id="parent"><div id="og" style="float: left;"><b>Blood Group: </b></div><div id="on" style="color: red; float: left;"><b>B+ve</b></div></div>
+ 		<br>
+ 		<!-- donor name-->
+ 		<div id="parent"><div id="og" style="float: left;"><b>Donor Name: </b></div><div id="on" style="color: #5F9EA0; float: left;"><b>Rohan</b></div></div>
+ 		<br>
+ 		<!-- donor area-->
+ 		<div id="parent"><div id="og" style="float: left;"><b>Location: </b></div><div id="on" style="color: #5F9EA0; float: left;"><b>Dwarka, New Delhi</b></div></div>
+ 		<br>
+ 		<!-- Donor contact information-->
+ 		<div id="parent"><div id="og" style="float: left;"><b>Mobile No.: </b></div><div id="on" style="color: #5F9EA0; float: left;"><b>7838686923</b></div></div>
+ 		<br>
+ 		<button class="btn btn-primary"> Request Organ</button>
+
+ 		</div>
+
+ 		</td>
+ 	</tr>
+
+ </table>
+ <div id="df" ><p><b>Couldn't find the organ you were looking for ? </b><br><b>Request it here:</b> </p>
+ </div>
+ <div id="ef" ><button class="btn btn-success  btn-lg" data-toggle="modal" data-target="#myModal">Request Organ</button></div>
+ </div>
+ 
+</center>
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title"><center>Request your organ</center></h4>
+      </div>
+      <div class="modal-body">
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success" data-dismiss="modal">Submit</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+ </body>
+ </head>
+ </html>
